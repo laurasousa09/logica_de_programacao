@@ -1,0 +1,104 @@
+//1-
+let nome
+nome = prompt("nome: ")
+while (nome !== "laura") {
+    console.log("Dados errados")
+    nome = prompt("nome: ")
+}
+console.log("Bem vindo!")
+
+//2-
+let senha = 1234
+senha = prompt("senha:")
+while (senha != 1234) {
+  console.log("Dados errados")
+  senha = prompt("senha:")
+}
+console.log("Bem vindo!")
+
+//3-
+let senha = prompt("Senha:")
+let confirmacaoDeSenha = prompt("Confirme sua senha: ")
+while (senha != 1234 || confirmacaoDeSenha != 1234) {
+  console.log("Dados incorretos")
+  confirmacaoDeSenha = prompt("Confirme sua senha:")
+}
+console.log("Bem vindo")
+
+//4-
+let login, senha
+login = prompt("Login: ")
+senha = prompt("Senha: ")
+while (login !== "admin" || senha != 1234){
+    console.log("Dados incorretos")
+  usuarioLogin = prompt("Login: ")
+  senhaLogin = prompt("Senha: ")
+} 
+console.log("Bem vindo")
+
+//5-
+let login, senha
+login = prompt("Login: ")
+senha = prompt("Senha: ")
+while (login !== "admin" || senha != 1234){
+    console.log("Usuário ou senha incorretos.")
+  usuarioLogin = prompt("Login: ")
+  senhaLogin = prompt("Senha: ")
+} 
+console.log("Bem vindo")
+
+
+//6-
+let tentativas = 0
+usuario = ""
+senha = ""
+while (tentativas < 3 && (usuario !== "laura" || senha != 1234)) {
+  usuario = prompt("Login:")
+  senha = prompt("Senha:")
+  if (usuario !== "laura" && senha != 1234) {
+      console.log("Usuário ou senha incorretos")
+tentativas ++
+  }
+}
+
+if (tentativas === 3) {
+  console.log("Acesso bloqueado.")
+}
+
+//7-
+let novoUser = prompt("Cadastre um nome:");
+let novaSenha = prompt("Cadastre uma senha:");
+
+user = "";
+senha = "";
+while (user !== novoUser || senha !== novaSenha) {
+  user = prompt("Login:");
+  senha = prompt("Senha:");
+}
+
+//8-
+user = "";
+senha = "";
+while (user !== "laura" || senha != 1234) {
+  user = prompt("Login:")
+  senha = prompt("Senha:")
+  let resposta = prompt("Esqueceu a senha? (sim/nao)")
+  if (resposta === "sim") {
+    console.log("Senha salva: " + novaSenha)
+  }
+}
+
+//9-
+user = "";
+pass = "";
+while (user !== "admin" || pass != 1234) {
+  user = prompt("Login:")
+  pass = prompt("Senha:")
+}
+console.log("Você está logado!")
+
+let comando = ""
+while (comando !== "sair") {
+  comando = prompt("Digite 'sair' para fazer logout:")
+}
+console.log("Você saiu do sistema.")
